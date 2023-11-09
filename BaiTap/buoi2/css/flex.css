@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url('../../font/open-sans.regular.ttf');
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../../font/open-sans.regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../../font/open-sans.light-italic.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url('../../font/open-sans.italic.ttf');
+    font-weight: 700;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    /* hiển thị con bên trong theo hàng hay cột */
+    flex-direction: row;
+    /* 
+        căn chỉnh các thành phần con theo chiều ngang màn hình
+        - flex-start: căn sang bên trái
+        - flex-end: căn sang bên phải
+        - center: căn giữa
+        - space-between: các thành phần con cách nhau 1 khoảng bằng nhau
+        - space-around: các thành phần con cách nhau 1 khoảng đều nhau, cách đều cả thành phần cha
+    */
+
+    justify-content: space-around;
+
+    height: 600px;
+    border: 1px solid #828282;
+
+    /* 
+        căn chỉnh nội dung theo chiều dọc màn hình
+        - flex-start: căn lên top
+        - flex-end: căn xuống bottom
+        - center: căn giữa
+        - space-between: các thành phần con cách nhau 1 khoảng bằng nhau
+        - space-around: các thành phần con cách nhau 1 khoảng đều nhau, cách đều cả thành phần cha
+    */
+
+    align-content: center;
+
+    /* 
+        căn chỉnh thành phần con theo chiều dọc màn hình
+    */
+    align-items: center;
+}
+
+.item{
+    width: 22%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #828282;
+    margin-bottom: 20px;
+}
+
+/* .item:nth-child(2n + 1){
+    background-color: red;
+    width: 200px;
+} */

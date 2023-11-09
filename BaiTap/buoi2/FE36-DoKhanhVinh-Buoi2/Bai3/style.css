@@ -1,0 +1,73 @@
+body{
+    background-color: rgb(123, 161, 223);
+}
+
+fieldset{
+    background-color: white;
+    max-width: 502px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    border: 1px solid #ccc;
+    font-family: Arial;
+}
+
+legend{
+    padding-top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+fieldset p{
+    text-align: center;
+}
+
+p:last-child a{
+    text-decoration: none;
+    color: green;
+}
+
+div{
+    margin: 20px;
+}
+
+.line-1 input{
+    height: 30px;  
+}
+
+.line-1 input:first-child{
+    width: 50%;
+}
+
+.line-1 input:last-child{
+    margin-left: 20px;
+    width: 190px;
+}
+
+.line input{
+    width: 455px;
+    height: 30px;
+}
+
+
+.policy a{
+    text-decoration: none;
+    color: rgb(46, 215, 54);
+}
+
+p:last-child{
+    margin-left: 20px;
+    width: 450px;
+    background-color: rgb(98, 227, 137);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.Sign-in{
+    margin-left: 150px;
+}
+
+.Sign-in a{
+    color: white;
+}

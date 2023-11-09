@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Buoi 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        header{
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav{
+            /* height: 50px; */
+            background-color: brown;
+        }
+
+        main{
+            height: 1500px;
+            display: flex;
+        }
+
+        footer{
+            height: 200px;
+            background-color: gray;
+        }
+
+        .logo{
+            font-size: 35px;
+            line-height: 150px;
+            margin-left: 30px;
+        }
+
+        .login{
+            font-size: 25px;
+            line-height: 150px;
+            margin-right: 30px;
+        }
+
+        .left{
+            width: 30%;
+            box-sizing: border-box;
+            padding: 0 15px;
+        }
+
+        .right{
+            width: 70%;
+            box-sizing: border-box;
+            padding: 0 15px;
+        }
+
+        .title{
+            text-align: center;
+        }
+
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            margin-top: 30px;
+        }
+
+        .left ul{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .left ul li:first-child{
+            font-size: 23px;
+            text-transform: uppercase;
+            padding: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .left ul li{
+            font-size: 18px;
+            padding: 10px 15px;
+        }
+
+        .menu_main{
+            display: flex;
+        }
+
+        .menu_main li{
+            padding: 10px 20px;
+            font-size: 17px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu_main li:hover{
+            background-color: rgb(134, 45, 45);
+        }
+    </style>
+</head>
+<body>
+    <!--body chứa nội dung của website-->
+    <!-- <h1>Chủ nhật 21-8-2022. fontend 36</h1> -->
+    <header>
+        <!--div dùng để phân bố cục trang -->
+        <div class="logo">
+            LOGO
+        </div>
+        <div class="login">
+            Đăng nhập/Đăng ký
+        </div>
+    </header>
+    <nav>
+        <ul class="menu_main">
+            <li>
+                <a href="https://google.com">Home</a>
+            </li>
+            <li>
+                <a target="_blank" href="./layout/main.html">Product</a>
+            </li>
+            <li>
+                About
+            </li>
+            <li>
+                News
+            </li>
+            <li>
+                Contacts
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="left">
+            <!-- thẻ danh sách ul li dùng để làm menu -->
+            <ul>
+                <li>Danh mục sản phẩm</li>
+                <li>Danh mục sản phẩm 1</li>
+                <li>Danh mục sản phẩm 2</li>
+                <li>Danh mục sản phầm 3</li>
+                <li>Danh mục sản phẩm 4</li>
+            </ul>
+        </div>
+        <div class="right">
+            <!--
+                Các thẻ h1 -> h6 dùng trong việc seo trang web
+                - những keyword quan trọng thì thẻ để thẻ h1 và mức độ quan trọng giảm dàn từ h1 -> h6
+            -->
+            <h1 class="title">Nôi dung bài viết HTML</h1>
+
+            <!--p dùng để chứa 1 đoạn văn bản-->
+            <p>
+                <!--thẻ b: đánh dấu, in đậm 1 đoạn text-->
+                <!--thẻ i: đánh dấu in nghiêng 1 đoạn text-->
+                <!-- br: xuống dòng -->
+                <b>Ở nơi nhiệt độ nóng quanh năm như này, hơn 70% khách 
+                    hàng nam khi đến với Blanc đều muốn tìm một mùi hương 
+                    nào đấy mát mẻ và nhẹ nhàng</b>, không cần quá nồng nàn 
+                    nhưng cũng phải đủ lưu hương để thêm phần tự tin khi 
+                    ra đường.<br> Với mức giá trung bình + mùi hương sảng khoái, 
+                    <i>Nautica là lựa chọn hợp lý nhất trong tầm giá</i>
+            </p>
+            <!-- 
+                Có 2 loại đường dẫn:
+                1. Đường dẫn tuyệt đối: là đường dẫn từ gốc đến ngọn
+                từ ổ đĩa nào -> folder -> file
+                2. Đường dẫn tương đối: đường dẫn sẽ lấy folder chứa
+                2 file là folder gốc
+                    - khi file html cùng chung folder gốc vs file image hoặc folder
+                    chứa ảnh
+                    ./ 
+                    - file html ko cùng folder gốc vs folder chứa ảnh
+                    ../
+             -->
+            <center>
+            <img src="./image/abc.png" height="300px">
+            </center>
+            <p>
+                <!--thẻ span: dùng để đánh dấu-->
+                <span style="color: red; font-weight: bold;">Chính thức chào sân vào 
+                    năm 2006, Nautica Voyaga nhanh chóng chiếm lĩnh sự ưu ái của mọi 
+                    người. Voyage dịch nôm na là những chuyến đi trên biển cả. 
+                    Cái tên gần như thể hiện trọn vẹn mùi hương của mình</span>
+            </p>
+            <center>
+                <video controls>
+                    <source src="./video/Martin Garrix, DubVision feat. Shaun Farrugia - Starlight (Keep Me Afloat) [Official Video].mp4">
+                </video>
+            </center>
+
+            <audio controls>
+                <source src="">
+            </audio>
+            <p>
+                <!--thẻ u: đánh dấu gạch chân đoạn text-->
+                <u>Hương thơm của Nautica như một chàng trai phiêu dạt 
+                    trên biển cả với nét nam tính khỏe mạnh, yêu thích 
+                    khám phá và đầu sức sống. Tầng hương đầu là sự 
+                    năng động, tươi mới của hương lục và táo. 
+                    Tầng hương giữa lại dần nhẹ xuống với sự tình cảm, 
+                    lãng mạn và thư thái bởi hoa trinh nữ kết hợp cùng 
+                    hoa sen. Rồi trầm dần ở tầng hương cuối với xạ hương,
+                     tuyết tùng, hổ phách và rêu sồi </u>
+            </p>
+
+            <!-- 
+                Quy tắc merge hàng và cột: 
+                 - merge hàng merge từ trên xuống dưới
+                 - merge cột merge từ trái sang phải
+             -->
+
+            <table border="1" style="width: 100%; margin-top: 30px;">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Mô tả</th>
+                    <th>Giá</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td rowspan="2">Áo thun</td>
+                    <td>Màu trắng, đẹp</td>
+                    <td>100.000đ</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+
+                    <td>Màu xanh, đẹp</td>
+                    <td>100.000đ</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Quần jeans</td>
+                    <td>Màu xanh</td>
+                    <td>300.000đ</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Tổng tiền:</td>
+                    <td colspan="2">500.000đ</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <!--Thẻ danh sách ol li-->
+        <ol>
+            <li>Danh sách 1</li>
+            <li>Danh sách 2
+                <ol type="I">
+                    <li>Danh sách con 1</li>
+                    <li>Danh sách con 2</li>
+                    <li>Danh sách con 3</li>
+                    <li>Danh sách con 4</li>
+                </ol>
+            </li>
+            <li>Danh sách 3</li>
+            <li>Danh sách 4</li>
+            <li>Danh sách 5</li>
+        </ol>
+    </footer>
+</body>
+</html>

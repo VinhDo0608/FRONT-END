@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Product</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="assets/backend/layout1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/backend/layout1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/backend/layout1/css/AdminLTE.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/backend/layout1/fonts/fontawesome-free-6.1.0-web/css/all.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="assets/backend/layout1/css/_all-skins.min.css">
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-green sidebar-mini">
+<div class="wrapper">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <a href="../Admin/index.html" class="logo">
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b></b>ADMINKIT</span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/backend/layout1/images/vinh.png" class="user-image" alt="User Image">
+                            <span class="hidden-xs">Your Profile</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="assets/backend/layout1/images/vinh.png" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Đỗ Khánh Vinh
+                                    <small>Web developer</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="assets/backend/layout1/images/vinh.png" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>Đỗ Khánh Vinh</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+            <!-- search form -->
+              <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                  <input type="text" name="q" class="form-control" placeholder="Tìm kiếm..."/>
+                  <span class="input-group-btn">
+                    <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                  </span>
+                </div>
+              </form>
+          <!-- /.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">ADMIN</li>
+
+                <li>
+                    <a href="/Admin/index.html">
+                        <i class="fa-solid fa-calendar"></i> <span>NEWS CATEGORY</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/product.html">
+                        <i class="fa-solid fa-bag-shopping"></i> <span>Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Admin/product-manager.html">
+                        <i class="fa-solid fa-newspaper"></i> <span>NEWS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-bag-shopping"></i> <span>ADVERTISE</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-user"></i> <span>MANAGE ACCOUNT</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i> <span>LOG OUT</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <style type="text/css">
+            .sidebar-menu i {
+                padding: 10px;
+            }
+        </style>
+        <!-- /.sidebar -->
+    </aside>
+
+    
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                Product
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content" id="content">
+            <button class="add-product" onclick="nhan()">Thêm Sản Phẩm</button>
+					<form action="" class="form-add" >
+						<h1>Thêm Sản Phẩm
+							<i class="fa-sharp fa-solid fa-rectangle-xmark close" onclick="dong()"></i>							
+						</h1>
+						
+						<div class="contentform">
+							<div class="leftcontact">
+								<div class="form-group">
+									<p>Tên Sản Phẩm<span>*</span></p>
+									<input type="text" name="nom" id="title" />
+								</div>
+								<div class="form-group">
+									<p>Giá<span>*</span></p>
+									<input type="text" name="nom" id="price" />
+								</div>
+								<div class="form-group">
+									<p>Giá Sale<span>*</span></p>
+									<input type="text" name="nom" id="price_sale" />
+								</div>
+								<div class="form-group">
+									<p>Mô Tả Ngắn<span>*</span></p>
+									<input type="text" name="nom" id="short_description" />
+								</div>
+								<div class="form-group">
+									<p>Mô Tả Chi Tiết<span>*</span></p>
+									<input type="text" name="nom" id="detail_description" />
+								</div>
+								<div class="form-group">
+									<p>Ảnh<span>*</span></p>
+									<input type="file" name="nom" id="avatar" />
+								</div>
+								<div class="form-group">
+									<p>Seo<span>*</span></p>
+									<input type="text" name="nom" id="seo" />
+								</div>
+								<div class="form-group">
+									<p>Xu hướng<span>*</span></p>
+									<input type="text" name="nom" id="is_hot" />
+								</div>
+							
+							</div>										
+						</div>
+						<button type="submit" class="button-contact">Send</button>
+			
+					</form>
+            <table class="table table-striped">
+                <thead>
+                    <th style="width: 100px;">STT</th>
+                    <th style="width: 150px;">Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Mô tả</th>
+                    <th style="width: 200px;">Giá</th>
+                    <th style="width: 200px;"></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img width="150px" src="../Admin/assets/backend/layout1/images/avatar.jpg" alt="">
+                        </td>
+                        <td>
+                            Sản phẩm 1
+                        </td>
+                        <td>
+                            Sản phẩm đẹp, bán chạy
+                        </td>
+                        <td>
+                            1.000.000đ
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">delete</button>
+                            <button type="button" class="btn btn-secondary">edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img width="150px" src="../Admin/assets/backend/layout1/images/avatar-3.jpg" alt="">
+                        </td>
+                        <td>
+                            Sản phẩm 2
+                        </td>
+                        <td>
+                            Sản phẩm đẹp, bán chạy
+                        </td>
+                        <td>
+                            1.000.000đ
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">delete</button>
+                            <button type="button" class="btn btn-secondary">edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <img width="150px" src="../Admin/assets/backend/layout1/images/avatar-2.jpg" alt="">
+                        </td>
+                        <td>
+                            Sản phẩm 3
+                        </td>
+                        <td>
+                            Sản phẩm đẹp, bán chạy
+                        </td>
+                        <td>
+                            1.000.000đ
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">delete</button>
+                            <button type="button" class="btn btn-secondary">edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- /.content -->
+
+
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <!-- <b>Version</b> 2.4.13-pre -->
+        </div>
+        <strong>Copyright &copy; by Do Khanh Vinh <a href="">AdminLTE</a>.</strong> All rights
+        reserved.
+    </footer>
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="assets/backend/layout1/js/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="assets/backend/layout1/js/jquery-ui.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/backend/layout1/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/backend/layout1/js/adminlte.min.js"></script>
+
+<script>
+    const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+function nhan(){
+        
+        document.querySelector('.form-add').style.display ='block';
+    }
+    function dong(){
+        
+        document.querySelector('.form-add').style.display ='none';
+    }
+allSideMenu.forEach(item=> {
+const li = item.parentElement;
+
+item.addEventListener('click', function () {
+    allSideMenu.forEach(i=> {
+        i.parentElement.classList.remove('active');
+    })
+    li.classList.add('active');
+})
+});
+
+
+
+
+// TOGGLE SIDEBAR
+const menuBar = document.querySelector('#content nav .bx.bx-menu');
+const sidebar = document.getElementById('sidebar');
+
+menuBar.addEventListener('click', function () {
+sidebar.classList.toggle('hide');
+})
+const searchButton = document.querySelector('#content nav form .form-input button');
+const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
+const searchForm = document.querySelector('#content nav form');
+
+searchButton.addEventListener('click', function (e) {
+	if(window.innerWidth < 576) {
+		e.preventDefault();
+		searchForm.classList.toggle('show');
+		if(searchForm.classList.contains('show')) {
+			searchButtonIcon.classList.replace('bx-search', 'bx-x');
+		} else {
+			searchButtonIcon.classList.replace('bx-x', 'bx-search');
+		}
+	}
+})
+
+
+
+
+
+if(window.innerWidth < 768) {
+	sidebar.classList.add('hide');
+} else if(window.innerWidth > 576) {
+	searchButtonIcon.classList.replace('bx-x', 'bx-search');
+	searchForm.classList.remove('show');
+}
+
+
+window.addEventListener('resize', function () {
+	if(this.innerWidth > 576) {
+		searchButtonIcon.classList.replace('bx-x', 'bx-search');
+		searchForm.classList.remove('show');
+	}
+})
+
+
+
+const switchMode = document.getElementById('switch-mode');
+
+switchMode.addEventListener('change', function () {
+	if(this.checked) {
+		document.body.classList.add('dark');
+	} else {
+		document.body.classList.remove('dark');
+	}
+})
+	</script>
+</body>
+</html>

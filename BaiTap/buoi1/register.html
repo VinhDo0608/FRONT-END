@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form đăng ký</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        fieldset{
+            max-width: 500px;
+            padding: 30px;
+            margin: 100px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ccc;
+            border: 1px solid #ccc;
+        }
+
+        legend{
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        .form-group label{
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .form-group .form-control{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Đăng ký tài khoản</legend>
+        <form action="" method="POST/GET">
+            <div class="form-group">
+                <label>Họ tên</label>
+                <input type="text" name="fullname" class="form-control" value="">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" class="form-control" value="">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" value="">
+            </div>
+            <div class="form-group">
+                <label>Giới tính</label>
+                <input type="radio" name="gender" value="1" checked/>Nam <br/>
+                <input type="radio" name="gender" value="2"/>Nu
+            </div>
+            <div class="form-group">
+                <label>Sở thích</label>
+                <input type="checkbox" name="hobby" value="1"/>Đá bóng <br>
+                <input type="checkbox" name="hobby" value="2"/>Game <br>
+                <input type="checkbox" name="hobby" value="3"/>Hát <br>
+            </div>
+            <div class="form-group">
+                <label>Ảnh đại diện</label>
+                <input type="file" name="avatar" value="">
+            </div>
+            <div class="form-group">
+                <label>Quê quán</label>
+                <select name="country" class="form-control">
+                    <option value="">---Vui lòng chọn---</option>
+                    <option value="HN" selected>Hà Nội</option>
+                    <option value="HCM">TP.Hồ Chí Minh</option>
+                    <option value="HP">Hải Phòng</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mô tả</label>
+                <textarea name="desc" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+               <button type="submit">Submit</button>
+               <button type="button">Hủy</button>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>

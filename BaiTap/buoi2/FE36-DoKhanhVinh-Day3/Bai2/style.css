@@ -1,0 +1,61 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding: 10px;
+    font-size: 35px;
+}
+
+.contain{
+    display: flex;
+    justify-content: space-around;
+}
+
+.item{
+    width: 25%;
+    border: 1px solid #00afef;
+}
+
+.line-1{
+    background-color: #00afef;
+    height: 25px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+.line-1 i{
+    float: right;
+}
+
+.price{
+    text-align: center;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.info > a{
+    text-align: center;
+    background-color: #00afef;
+    padding: 10px 50px;
+    margin: 0px 120px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+ol{
+    list-style-type: none;
+}
+.info-item{
+   padding: 20px;
+}
+
+.info-item > li > a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bai 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    td{
+        padding: 10px;
+    }
+</style>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td colspan="2"><b><center>Mẫu đăng ký</center></b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="" method="POST">
+                <thead>
+                    <tr>
+                        <td style="width: 40%;"><b>Họ tên</b></td>
+                        <td>
+                            <div>
+                                <input type="text" name="Nhập fullname" placeholder="Nhập họ tên của bạn" style="width: 250px;">
+                            </div>
+                        </td>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <td><b>Giới tính</b></td>
+                        <td>
+                            <input type="radio" name="gender" value="1" checked/>Nam <br/>
+                            <input type="radio" name="gender" value="2"/>Nu
+                        </td>
+                    </tr>
+                </thead>
+                <thead>
+                    <td><b>Lĩnh vực công việc</b></td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="1"/>Y tế <br>
+                        <input type="checkbox" name="hobby" value="2"/>Giáo dục <br>
+                        <input type="checkbox" name="hobby" value="3"/>Kỹ thuật <br>
+                    </td>
+                </thead>
+                <thead>
+                    <td><b>Sinh ngày</b></td>
+                    <td>
+                        <div>
+                            <select name="Ngày">
+                                <option value="Ngày 1">Ngày 18</option>
+                                <option value="Ngày 2">Ngày 2</option>
+                                <option value="Ngày 3">Ngày 3</option>
+                                <option value="Ngày 4">Ngày 4</option>
+                                <option value="Ngày 5">Ngày 5</option>
+                            </select>
+                            <select name="Tháng">
+                                <option value="Tháng 1">Tháng 09</option>
+                                <option value="Tháng 2">Tháng 2</option>
+                                <option value="Tháng 3">Tháng 3</option>
+                                <option value="Tháng 4">Tháng 4</option>
+                                <option value="Tháng 5">Tháng 5</option>
+                            </select>
+                            <select name="Năm">
+                                <option value="Năm 2015">Năm 1995</option>
+                                <option value="Năm 2016">Năm 2016</option>
+                                <option value="Năm 2016">Năm 2016</option>
+                                <option value="Năm 2017">Năm 2017</option>
+                                <option value="Năm 2018">Năm 2018</option>
+                            </select>
+                        </div>
+                    </td>
+                </thead>
+                <thead>
+                    <td><b>Ảnh đại diện</b></td>
+                    <td>
+                        <div>
+                            <input type="file" name="avatar" accept="image/">
+                        </div>
+                    </td>
+                </thead>
+                <thead>
+                    <td><b>Giới thiệu về bản thân</b></td>
+                    <td>
+                        <div>
+                            <textarea type="description" cols="35" rows="10"></textarea>
+                        </div>
+                    </td>
+                </thead>
+            </form>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
+    <script src='main.js'></script>
+
+    <!-- <style>
+        h1{
+            text-shadow: 5px 6px 5px #282828;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- 
+        Cách khai báo css trong file html
+        1. Sử dụng thuộc tính style của html
+        2. Sử dụng cặp thẻ style 
+        3> Tạo file css và sử dụng tag link để khai báo file css vào file html
+     -->
+    <!-- <h1 class="title" id="frontend36" style="color: red;">Bài 2 css Frontend 36</h1>
+
+    <div class="title" data-name="Fe36">
+        Xin chào các bạn Frontend 36
+    </div> -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                logo
+            </div>
+            <div class="login_register">
+                <a href="">Đăng nhập</a>
+                <a href="">Đăng ký</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul class="menu_main">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">Products</a>
+                    <div class="sub_menu">
+                        <ul>
+                            <li>
+                                <a href="">Quần áo</a>
+                            </li>
+                            <li>
+                                <a href="">Quần jeans</a>
+                            </li>
+                            <li>
+                                <a href="">Áo sơ mi</a>
+                            </li>
+                            <li>
+                                <a href="">Giày nam</a>
+                            </li>
+                            <li>
+                                <a href="">Giày nữ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">News</a>
+                </li>
+                <li>
+                    <a href="">About us</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="breadcrum">
+                <ol>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Giày nam</a>
+                    </li>
+                    <li>
+                        Giày ABC
+                    </li>
+                </ol>
+            </div>
+            <div class="content">
+                <div class="menu_sidebar">
+                    <ul>
+                        <li>Danh mục sản phẩm</li>
+                        <li>
+                            <a href="">Chảo gang</a>
+                        </li>
+                        <li>
+                            <a href="">Dao kéo</a>
+                        </li>
+                        <li>
+                            <a href="">Khay nướng</a>
+                        </li>
+                        <li>
+                            <a href="">Phụ kiện</a>
+                        </li>
+                    </ul>
+
+                    <ul class="filter">
+                        <li>Giá</li>
+                        <li>
+                            <input type="checkbox" name="price" id="price_1">
+                            <label for="price_1">100.000đ - 200.000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="price" id="price_2">
+                            <label for="price_2">200.000đ - 300.000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="price" id="price_3">
+                            <label for="price_3">300.000đ - 400.000đ</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="price" id="price_4">
+                            <label for="price_4">400.000đ - 500.000đ</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list_product">
+                    <h1 class="category_name"> Chảo</h1>
+                    <div class="products">
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                        <!-- Start -->
+                        <div class="item">
+                            <div class="info_product">
+                                <a class="img_prd" href="">
+                                    <img src="../../buoi1/image/abc.png" alt="">
+                                </a>
+                                <div>
+                                    <h2>
+                                        <a href="">
+                                            Chảo gang lodge
+                                        </a>
+                                    </h2>
+                                    <div class="desc">
+                                        Không cần bôi dầu, có khả năng chống dính tốt
+                                    </div>
+                                    <div class="price">
+                                        500.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End -->
+                    </div>
+                    <div class="pagination">
+                        <ul>
+                            <li>
+                                <a href="">Pre</a>
+                            </li>
+                            <li>
+                                <a href="">1</a>
+                            </li>
+                            <li>
+                                <a href="">2</a>
+                            </li>
+                            <li>
+                                <a href="">3</a>
+                            </li>
+                            <li>
+                                <a href="">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container container_footer">
+            <div class="info_company">
+                <div class="name">
+                    Công ty Devpro
+                </div>
+                <div class="address">
+                    Địa chỉ: Mai Dịch, Cầu Giấy, Hà Nội
+                </div>
+                <div class="phone">
+                    Số điện thoại: 0123456789
+                </div>
+                <div class="email">
+                    Email: devpro@gmail.com
+                </div>
+            </div>
+            <div class="content_footer">
+                <div class="menu_footer">
+                    <ul>
+                        <li>Tin tức</li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_footer">
+                    <ul>
+                        <li>Giới thiệu</li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                        <li>
+                            <a href="">menu footer</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="google_map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d930.958683585163!2d105.77283962920099!3d21.03929769912454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b5534fb3bf%3A0x70d71b071349fa94!2sDevPro%20Education!5e0!3m2!1svi!2s!4v1661692643826!5m2!1svi!2s"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Đăng Ký</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/register.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="form_register">
+        <form action="" method="post">
+            <h2 id="title_form">Đăng ký tài khoản</h2>
+            <div class="row">
+                <label for="">Họ tên</label>
+                <input type="text" field-name="họ tên" onkeyup="keyupFullname()" name="fullname" id="input_fullname" class="form_control">
+                <p class="error" id="error_fullname"></p>
+            </div>
+            <div class="row">
+                <label for="">Email</label>
+                <input type="email" field-name="email" name="email" class="form_control">
+                <p class="error" id="error_email"></p>
+            </div>
+            <div class="row">
+                <label for="">mật khẩu</label>
+                <input type="password" field-name="mật khẩu" name="password" class="form_control">
+                <p class="error" id="error_password"></p>
+            </div>
+            <div class="row">
+                <label for="">Xác nhận mật khẩu</label>
+                <input type="password" field-name="xác nhận mật khẩu" name="password_confirm" class="form_control">
+                <p class="error" id="error_password_confirm"></p>
+            </div>
+            <div class="row">
+                <label for="">Giới tính</label>
+                <div>
+                    <input type="radio" name="gender" value="1">Nam <br>
+                    <input type="radio" name="gender" value="0">Nữ
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Tỉnh/Thành phố</label>
+                <select name="" class="form_control" id="" name="country" onchange="chooseCity()">
+                    <option value="">Chọn tỉnh/ thành phố</option>
+                    <option value="HN">Hà Nội</option>
+                    <option value="HP">Hải Phòng</option>
+                    <option value="NĐ">Nam Định</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="">Ảnh đại diện</label>
+                <label for="">
+                    <input  type="file" id="avatar" style="display: none;">
+                    <img src="../image/R.jpg" onchange="onchangeAvatar()" alt="" width="150px">
+                </label>
+            </div>
+            <div class="row">
+                <button type="button" class="btn_register" onclick="valiDate()">Đăng ký</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="../js/register.js"></script>
+</body>
+</html>

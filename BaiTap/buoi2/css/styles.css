@@ -1,0 +1,468 @@
+/* 
+    Các cách selector tag html trong css
+ */
+
+ /* selector theo tên tag */
+ body{
+    margin: 0;
+ }
+
+ /* selector theo tên class */
+.title{
+    text-align: center;
+}
+
+/* selector theo id */
+#frontent36{
+    font-family: Arial;
+}
+
+/* selector thông qua thuộc tính */
+div[data-name="Fe36"]{
+    font-size: 20px;
+}
+
+header{
+    height: 150px;
+}
+
+.container{
+    max-width: 1200px;
+    /* font-size: 30px; */
+    /* margin-top: 50px;
+    margin-right: ;
+    margin-bottom: ;
+    margin-left: 100px; */
+
+    /* Cách viết rút gọn margin 
+        1. margin: Apx Bpx Cpx Dpx
+        A: top
+        B: right
+        C: bottom
+        D: left 
+
+        2. margin: Apx Bpx Cpx
+        A: top
+        B: right/left
+        C: bottom
+        
+        3. margin: Apx Bpx
+        A: top/bottom
+        B: right/left
+
+        4. margin: Apx
+        A: top/right/bottom/left
+
+        giá trị auto căn phần tử html ra giữa theo chiều ngang
+    */
+    margin: auto;
+
+}
+
+.logo{
+    float: left;
+    font-size: 35px;
+    /* 
+        font-weight: bold;
+        độ đậm nhạt của chữ
+    */
+    font-weight: bold; /*bold = 700*/
+    /* 
+        text-transform: uppercase; viết hoa hết
+        text-transform: lowercase; viết thường hết
+        text-transform: capitalize; viết hoa chữ cái đầu tiên
+    */
+    text-transform: uppercase;
+    /* Chiều cao 1 dòng */
+    line-height: 150px;
+}
+
+.login_register{
+    float: right;
+    font-size: 20px;
+    line-height: 150px;
+}
+
+nav{
+    background-color: brown;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu_main{
+    /* display: flex; dùng phân bố cục trang */
+    display: flex;
+}
+
+.menu_main > li{
+    /* 
+        - biến phần tử html có tọa độ 2D 
+        - tọa độ gốc ban đầu là vị trí hiện tại của phần tử html
+    */
+    position: relative;
+    /* 
+        các thuộc tính css có tọa độ 2D
+        top: Apx;
+        right: Bpx;
+        left: Cpx;
+        bottom: Dpx;
+
+        sử dụng tạo 2D để di chuyển phần tử html ra khỏi vị trí tọa độ gốc
+    */
+}
+
+/* selector cha con */
+.menu_main > li > a{
+    display: block;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 0;
+    padding: 10px 15px;
+    color: white;
+    /* 
+        text-decoration: underline; gạch chân
+        text-decoration: overline; gạch trên đầu
+        text-decoration: line-through; gạch hủy
+        text-decoration: none;
+    */
+    text-decoration: none;
+}
+
+.menu_main > li > a:hover{
+    background-color: rgb(204, 31, 31);
+}
+
+.sub_menu{
+    /* 
+        - biến phần tử html có tọa độ 2D
+        - tọa độ gốc:
+            TH1: khi không có phần tử html cha nào có position relative
+            -> tọa độ ban đầu là góc bên trên bên trái màn hình
+            TH2: phần tử cha có position relative
+            -> tọa độ gốc ban đầu là tọa độ gốc của phần tử html cha
+    */
+    position: absolute;
+    top: 41px;
+    background-color: white;
+    width: 200px;
+    /* 
+        box-shadow: Apx Bpx Cpx #color;
+        A: đổ bóng sang bên phải
+        B: đổ bóng xuống dưới
+        C: độ nhòe của bóng
+        color: màu bóng
+    */
+    box-shadow: 0 0 5px #828282;
+    /* opacity: 1; làm trong phần tử html giá trị 0 -> 1 */
+    opacity: 0;
+    visibility: hidden;
+    /* transition: As; thời gian của 1 chuyển động */
+    transition: 0.5s;
+}
+
+.sub_menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 15px;
+    color: #282828;
+}
+
+.sub_menu ul li a:hover{
+    background-color: #ccc;
+}
+
+/* selector đến phần tử html kế tiếp cùng cấp */
+/* .menu_main > li > a:hover + div.sub_menu{
+    opacity: 1;
+    visibility: visible;
+} */
+
+.menu_main > li:hover div.sub_menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+ol{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.breadcrum{
+    padding: 15px;
+    background-color: #f6f6f6;
+}
+
+.breadcrum ol{
+    display: flex;
+}
+
+.breadcrum ol li{
+    margin-right: 50px;
+    position: relative;
+}
+
+.breadcrum ol li a{
+    text-decoration: none;
+    color: #282828;
+    font-size: 17px;
+}
+
+.breadcrum ol li::before{
+    content: ">>";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: -35px;
+}
+
+.breadcrum ol li:last-child::before{
+    display: none;
+}
+
+.content{
+    display: flex;
+    margin-top: 40px;
+}
+
+.menu_sidebar{
+    /* 
+        display: block; xác định phần tử html là 1 khung chứa. width ban đầu bằng 100% cha,
+        set được width, height, padding
+    */
+    /* 
+        display: inline; width bằng đúng nội dung nó chứa và không set được width, height, padding
+    */
+    /* 
+        display: inline-block; 
+            - width ban đầu bằng đúng nội dung nó chứa
+            - xác định phần tử html là 1 khung chứa và set được width, height, padding
+    */
+    display: block;
+    width: 30%;
+    padding: 0 15px;
+}
+
+.list_product{
+    display: block;
+    width: 70%;
+    padding: 0 15px;
+}
+
+.menu_sidebar ul{
+    border: 1px solid #828282;
+    /* Bo tròn góc */
+    border-radius: 5px;
+}
+
+.menu_sidebar ul li:first-child{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu_sidebar ul li a{
+    font-size: 18px;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    color: #282828;
+}
+
+.menu_sidebar ul:last-child{
+    margin-top: 30px;
+}
+
+.filter li{
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.filter li input[type="checkbox"]{
+    display: none;
+}
+
+.filter li label{
+    position: relative;
+    padding-left: 40px;
+}
+
+.filter li label::before{
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 1px solid #828282;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -4px;
+}
+
+.filter li input[type="checkbox"]:checked + label::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 11px;
+    border-right: 3px solid brown;
+    border-bottom: 3px solid brown;
+    left: 9.5px;
+    top: 0px;
+    /* Xoay phần tử đi bao nhiêu độ */
+    transform: rotate(45deg);
+}
+
+.filter li input[type="checkbox"]:checked + label::before{
+    border: 1px solid brown;
+}
+
+.category_name{
+    font-size: 30px;
+    margin-top: 0%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.products{
+    display: flex;
+    /* Cho phép con xuống dòng không khi tổng width con > 100% */
+    flex-wrap: wrap;
+}
+
+.item{
+    width: calc(100% / 3);
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.img_prd{
+    display: block;
+}
+
+.img_prd img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.info_product{
+    border: 1px solid #ccc;
+}
+
+.info_product > div{
+    padding: 0 10px 15px;
+}
+
+.info_product > div h2{
+    margin: 5px 0;
+}
+
+.info_product > div h2 a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #282828;
+}
+
+.info_product > div .desc{
+    /* thụt đầu dòng */
+    text-indent: 10px;
+    line-height: 23px;
+    /* Khoảng cách giữa các chữ cái */
+    /* letter-spacing: 8px; */
+
+    /* Khoảng cách giữa các từ */
+    /* word-spacing: 8px; */
+
+    white-space: nowrap;
+    /* 
+        overflow: dùng để điều chỉnh cách hiển thị nội dung thừa
+            - hidden: ẩn nội dung thừa
+    */
+    overflow: hidden;
+
+    /* 
+        text-overflow: cách hiển thị nội dung thừa đối với text
+    */
+    text-overflow: ellipsis;
+}
+
+.info_product > div .price{
+    font-size: 20px;
+    font-weight: bold;
+    /* text-align: căn chỉnh text sang trái, phải, giữa */
+    text-align: right;
+    margin-top: 5px;
+    color: brown;
+}
+
+.info_product:hover img{
+    /* tăng giảm kích thước phần tử html */
+    transform: scale(1.5);
+}
+
+.pagination{
+    margin-bottom: 30px;
+}
+
+.pagination ul{
+    display: flex;
+    /* margin: auto; */
+    justify-content: center;
+}
+
+.pagination ul li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #282828;
+    border: 1px solid #ccc;
+}
+
+.container_footer{
+    display: flex;
+    padding: 30px 0;
+}
+
+.info_company{
+    width: 35%;
+}
+
+.content_footer{
+    width: 65%;
+}
+
+.info_company .name{
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.info_company .address, .info_company .phone, .info_company .email{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.content_footer{
+    display: flex;
+}
+
+.content_footer > div{
+    width: calc(100% /3);
+}
